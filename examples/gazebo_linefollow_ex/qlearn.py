@@ -18,7 +18,7 @@ class QLearn:
         
         # TODO: Implement loading Q values from pickle file.
 
-        file = open(filename+".pickle", 'rb')
+        file = open(filename + ".pickle", 'rb')
         self.q = pickle.load(file)
         print("Loaded file: {}".format(filename+".pickle"))
 
@@ -27,8 +27,8 @@ class QLearn:
         Save the Q state-action values in a pickle file.
         '''
         # TODO: Implement saving Q values to pickle and CSV files.
-
-        file = open(filename, 'wb')
+        print("SAVING LINE\n")
+        file = open(filename + ".pickle", 'wb')
         pickle.dump(self.q, file)
 
         # np.savetxt(filename + ".csv", self.q, delimiter=",")
